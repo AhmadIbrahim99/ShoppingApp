@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_meat"
+            android:title="Meat" />
+        <item
+            android:id="@+id/nav_vegetable"
+            android:title="Vegetable" />
+        <item
+            android:id="@+id/nav_fish"
+            android:title="Fish" />
+        <item
+            android:id="@+id/nav_fruit"
+            android:title="Fruit" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_flogout"
+                android:title="Home" />
+            <item
+                android:id="@+id/nav_fChases"
+                android:title="purchases" />
+        </menu>
+    </item>
+
+</menu>

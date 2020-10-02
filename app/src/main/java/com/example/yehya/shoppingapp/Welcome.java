@@ -1,0 +1,28 @@
+package com.example.yehya.shoppingapp;
+
+import android.content.Intent;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.WindowManager;
+
+public class Welcome extends AppCompatActivity {
+    private static  int SPLASH_TIME_OUT = 2000;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_welcome);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS , WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run(){
+                Intent homeIntent = new Intent(getApplicationContext() , LoginOrCreateAccount.class);
+                startActivity(homeIntent);
+                finish();
+            }
+        },SPLASH_TIME_OUT);
+    }
+}
